@@ -70,8 +70,16 @@ function main() {
 	chown -R pi <user home dir path here>/${name}.conf
 	echo "##### Configuration file for user $name copied to /home/pi #####"
 
-	qrencode -t ansiutf8 -r "/etc/wireguard/${name}.conf"
-
+	if ! command -v qrencode &> /dev/null
+	then
+	    echo "qrencode could not be found, installing..."
+	    apt-get install qrencode -y
+	fi	
+	if [ $? -eq 0 ]; then
+	    qrencode -t ansiutf8 -r "/etc/wireguard/${name}.conf"
+	else
+	    echo "Error while trying to print the qr code of the newly created user configuration"
+	fi
 }
 
 main
