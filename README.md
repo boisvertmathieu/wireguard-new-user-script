@@ -12,7 +12,7 @@ echo "Endpoint = <your public ip or you domain name here>:47111" >> "${name}.con
 
 Of course, you will also need to have port forwarded the port 47111 in your router to your wireguard server as well.
 
-Also, set the proper user name and home dir path at the end of the script here :
+Also, set the proper user name and user home dir path at the end of the script here :
 ```
 cp /etc/wireguard/${name}.conf <user home dir path here (ex. /home/pir)>
 chown -R pi <user home dir path here>/${name}.conf
