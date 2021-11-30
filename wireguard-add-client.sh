@@ -6,6 +6,7 @@ function next_ip() {
 	IFS='/' read -ra IP_W_NO_SUBNET <<< "${IPADDR[${#IPADDR[@]}-1]}"
 	IFS='.' read -ra LAST_OCTET <<< "${IP_W_NO_SUBNET[0]}"
 	lastoct=${LAST_OCTET[${#LAST_OCTET[@]}-1]}
+	# TODO : Must be able to increment ip addresses correctly beyond x.x.x.254
 	if [ "$lastoct" -eq 99 ]; then
 		echo "There is too many clients. Fix you script or delete some clients"
 		exit
