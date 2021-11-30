@@ -66,8 +66,8 @@ function main() {
 	echo "##### Finisshed creating the client configuration #####"
 
 
-	cp /etc/wireguard/${name}.conf /home/pi
-	chown -R pi /home/pi/${name}.conf
+	cp /etc/wireguard/${name}.conf <user home dir path here (ex. /home/pi)>
+	chown -R pi <user home dir path here>/${name}.conf
 	echo "##### Configuration file for user $name copied to /home/pi #####"
 
 	qrencode -t ansiutf8 -r "/etc/wireguard/${name}.conf"
