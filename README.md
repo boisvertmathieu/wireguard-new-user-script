@@ -14,6 +14,6 @@ Of course, you will also need to have port forwarded the port 47111 in your rout
 
 Also, set the proper user name and user home dir path at the end of the script here :
 ```
-cp /etc/wireguard/${name}.conf <user home dir path here (ex. /home/pir)>
+cp /etc/wireguard/${name}.conf <user home dir path here (ex. /home/pi)>
 chown -R pi <user home dir path here>/${name}.conf
 ```
