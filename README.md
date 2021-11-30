@@ -4,11 +4,13 @@ Simple script that facilitates the creation of new users for a wireguard vpn ser
 
 ### Before first run :
 
-You will need to set you public ip or your dyndns domain name in the script on line 62:
+You will need to set you public ip or your dyndns domain name in the script here:
 
 ```
 echo "Endpoint = <your public ip or you domain name here>:47111" >> "${name}.conf"
 ```
+
+Of course, you will also need to have port forwarded the port 47111 in your router to your wireguard server as well.
 
 ### Note :
 
